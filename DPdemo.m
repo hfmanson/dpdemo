@@ -52,6 +52,12 @@ if(~octave)
     hold on; set(gca, 'ColorOrder', [0 .5 0]); set(gca, 'XLim', [0 fMax+100]);
     psd(dp(:,2), 256, sampSec);
     hold off;
+else
+    % show power spectrum    
+    periodogram(dp(:,1), [], 256, sampSec);
+    hold on; set(gca, 'ColorOrder', [0 .5 0]); set(gca, 'XLim', [0 fMax+100]);
+    periodogram(dp(:,2), [], 256, sampSec);
+    hold off;    
 end
 
 % play and save
