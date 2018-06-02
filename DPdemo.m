@@ -56,7 +56,7 @@ end
 
 % play and save
 sound(dp, sampSec);
-wavwrite(dp, sampSec, 'dp.wav');
+audiowrite('dp.wav', dp, sampSec);
 
 
 %
@@ -92,7 +92,7 @@ dp = dp./max(max(abs(dp)));
 
 % play and save
 sound(dp, sampSec);
-wavwrite(dp, sampSec, 'dpSBR.wav');
+audiowrite('dpSBR.wav', dp, sampSec);
 
 
 %
@@ -155,4 +155,4 @@ dp = dp./max(max(abs(dp)));
 
 % play and save
 sound(dp, sampSec);
-wavwrite(dp, sampSec, 'dpMelody.wav')
+audiowrite('dpMelody.wav', dp, sampSec);
